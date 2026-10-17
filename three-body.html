@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three-Body Problem</title>
+    <style>
+      body { margin: 0; background: #000; overflow: hidden; font-family: system-ui, sans-serif; }
+      #panel {
+        position: fixed; top: 12px; left: 12px; padding: 12px 14px;
+        background: rgba(20, 20, 30, 0.75); color: #eee; border-radius: 10px;
+        display: flex; flex-direction: column; gap: 10px; font-size: 14px; max-width: 240px;
+      }
+      #panel button {
+        padding: 8px 12px; border-radius: 8px; border: 0; cursor: pointer; font-size: 14px;
+      }
+      #panel label { display: flex; flex-direction: column; gap: 4px; }
+      #panel a { color: #8ab4ff; text-decoration: none; }
+      #info { opacity: 0.7; font-size: 12px; line-height: 1.4; }
+    </style>
+  </head>
+  <body>
+    <div id="panel">
+      <a href="/index.html">← Solar system</a>
+      <button id="btn-eight">Figure-eight (stable)</button>
+      <button id="btn-chaos">Random (chaotic)</button>
+      <button id="btn-pause">Pause</button>
+      <label>
+        Speed
+        <input id="speed" type="range" min="1" max="10" step="1" value="2" />
+      </label>
+      <div id="info">
+        Three equal masses pulling on each other with Newtonian gravity.
+        Press <b>Random</b> a few times: most runs are chaotic and end with one body flung away.
+      </div>
+    </div>
+    <script type="module" src="/three-body.js"></script>
+  </body>
+</html>
